@@ -12,18 +12,6 @@ App Vestiaire est une application web destinée à gérer et générer des tenue
 
 **Technologies utilisées :**  
 - Flask pour le backend.  
-- HTML, CSS et JavaScript pour la conception frontend.  
+- HTML et CSS pour la conception frontend.  
 - Gestion des données avec JSON pour le vestiaire des vêtements.  
 - GitHub Actions pour le déploiement automatique.
-
-**Installation :**  
-1. Clonez le dépôt : `git clone https://github.com/TON_USERNAME/App-Vestiaire.git`  
-2. Créez un environnement virtuel : `python -m venv env`  
-3. Activez l’environnement et installez les dépendances : `pip install -r requirements.txt`  
-4. Lancez l’application : `python app.py`
-
-**Contributeurs :**  
-Si vous souhaitez contribuer, forkez ce dépôt et soumettez une pull request.
-
-**Contact :**  
-Pour toute question ou suggestion, contactez-moi sur [GitHub](https://github.com/TON_USERNAME) ou par email à [tonemail@example.com].
