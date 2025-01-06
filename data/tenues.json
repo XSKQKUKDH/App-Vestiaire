@@ -206,5 +206,31 @@
             "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
             "id": 10
         }
+    },
+    {
+        "haut": {
+            "name": "t shirt vert",
+            "color": "vert",
+            "style": "chic",
+            "categorie": "t-shirt",
+            "lien_image": "static\\assets\\images\\t shirt vert.webp",
+            "id": 5
+        },
+        "bas": {
+            "name": "pantalon en cuir",
+            "color": "noir",
+            "style": "casual",
+            "categorie": "pantalon",
+            "lien_image": "static\\assets\\images\\pantlon cuir.webp",
+            "id": 11
+        },
+        "chaussures": {
+            "name": "air jordan bleu",
+            "color": "bleu",
+            "style": "casual",
+            "categorie": "baskets",
+            "lien_image": "static\\assets\\images\\air jordan bleu.jpeg",
+            "id": 8
+        }
     }
 ]

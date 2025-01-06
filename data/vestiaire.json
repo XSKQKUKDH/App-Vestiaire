@@ -86,5 +86,13 @@
         "categorie": "baskets",
         "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
         "id": 10
+    },
+    {
+        "name": "pantalon en cuir",
+        "color": "noir",
+        "style": "casual",
+        "categorie": "pantalon",
+        "lien_image": "static\\assets\\images\\pantlon cuir.webp",
+        "id": 11
     }
 ]

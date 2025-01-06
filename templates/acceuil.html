@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="refresh" content="3,url={{ url_for('home') }}">
+        <meta http-equiv="refresh" content="4,url={{ url_for('home') }}">
         <title>Home</title>
         <style>
             .image-acceuil {
@@ -14,7 +14,7 @@
                 height: 100vh;
                 opacity: 0;
 
-                animation: apearDownDisapearLeft 3s ease-in-out;
+                animation: apearDownDisapearLeft 4s ease-in-out;
             }
             img {
                 width: 50%;
@@ -25,7 +25,11 @@
                     transform: translateY(-90%);
                     opacity: 0;
                 }
-                50% {
+                40% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                60% {
                     transform: translateY(0);
                     opacity: 1;
                 }
