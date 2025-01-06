@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        
+        <title>Home</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="static/assets/logo/logo_vestiaire.png" alt="Vestiaire">
+            </div>
+            <nav class="navBar">
+                <div class="page_name active"><a href="{{ url_for('home') }}">Home</a></div>
+                <div class="page_name"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
+                <div class="page_name"><a href="{{ url_for('generer') }}">Générer</a></div>
+            </nav>
+            <div class="presentation">
+                <h1 class="header-1">Bienvenue sur Vestiaire ici plus besoin de réfléchir à vos tenues</h1>
+                <div class="skills">
+                    <div class="skill-item">Expertise</div>
+                    <div class="skill-item">Vestiaire</div>
+                    <div class="skill-item">Automation</div>
+                    <div class="skill-item">Design System</div>
+                </div>
+            </div>
+            
+        </header>
+        
+        <main>
+            <div class="tenues-container">
+                {% for tenue in tenues %}
+                <div class="tenue">
+                    <div class="vetement">
+                        <img src="{{ tenue['haut']['lien_image'] }}" alt="{{ tenue['haut']['name'] }}">
+                        <!-- <p>{{ tenue['haut']['name'] }}</p> -->
+                    </div>
+                    <div class="vetement">
+                        <img src="{{ tenue['bas']['lien_image'] }}" alt="{{ tenue['bas']['name'] }}">
+                        <!-- <p>{{ tenue['bas']['name'] }}</p> -->
+                    </div>
+                    <div class="vetement">
+                        <img src="{{ tenue['chaussures']['lien_image'] }}" alt="{{ tenue['chaussures']['name'] }}">
+                        <!-- <p>{{ tenue['chaussures']['name'] }}</p> -->
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+[
+    {
+        "name": "t-shirt nyc",
+        "color": "noir",
+        "style": "casual",
+        "categorie": "t-shirt",
+        "lien_image": "static\\assets\\images\\t-shirt noir.jpeg",
+        "id": 0
+    },
+    {
+        "name": "pantalon blanc",
+        "color": "blanc",
+        "style": "casual",
+        "categorie": "pantalon",
+        "lien_image": "static\\assets\\images\\pentalon_blanc.jpeg",
+        "id": 1
+    },
+    {
+        "name": "sweat bleu",
+        "color": "bleu",
+        "style": "streetwear",
+        "categorie": "sweatshirt",
+        "lien_image": "static\\assets\\images\\sweet bleu.webp",
+        "id": 2
+    },
+    {
+        "name": "pull noir",
+        "color": "noir",
+        "style": "casual",
+        "categorie": "pull",
+        "lien_image": "static\\assets\\images\\image_pull1.jpeg",
+        "id": 3
+    },
+    {
+        "name": "pull noir gris",
+        "color": "noir",
+        "style": "casual",
+        "categorie": "pull",
+        "lien_image": "static\\assets\\images\\pull gris.webp",
+        "id": 4
+    },
+    {
+        "name": "t shirt vert",
+        "color": "vert",
+        "style": "chic",
+        "categorie": "t-shirt",
+        "lien_image": "static\\assets\\images\\t shirt vert.webp",
+        "id": 5
+    },
+    {
+        "name": "air force 1",
+        "color": "blanc",
+        "style": "casual",
+        "categorie": "baskets",
+        "lien_image": "static\\assets\\images\\air force 1.jpeg",
+        "id": 6
+    },
+    {
+        "name": "pull blanc",
+        "color": "blanc",
+        "style": "casual",
+        "categorie": "pull",
+        "lien_image": "static\\assets\\images\\pull blanc.jpeg",
+        "id": 7
+    },
+    {
+        "name": "air jordan bleu",
+        "color": "bleu",
+        "style": "casual",
+        "categorie": "baskets",
+        "lien_image": "static\\assets\\images\\air jordan bleu.jpeg",
+        "id": 8
+    },
+    {
+        "name": "Jean Noir",
+        "color": "noir",
+        "style": "casual",
+        "categorie": "jean",
+        "lien_image": "static\\assets\\images\\jean_noir.jpeg",
+        "id": 9
+    },
+    {
+        "name": "Jordan 4 Retro",
+        "color": "bleu",
+        "style": "streetwear",
+        "categorie": "baskets",
+        "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
+        "id": 10
+    }
+]

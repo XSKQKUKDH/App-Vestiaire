@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <title>Vestiaire</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navBar">
+                <div class="page_name"><a href="{{ url_for('home') }}">Home</a></div>
+                <div class="page_name active"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
+                <div class="page_name"><a href="{{ url_for('generer') }}">Générer</a></div>
+            </nav>
+
+            <h1 class="header-1">Vestiaire</h1>
+            <form action="{{ url_for('ajouter') }}" method="GET" class="btn-section">
+                <button type="submit">Ajouter un vêtement</button>
+            </form>
+        </header>
+
+        <main>
+            <section class="vestiaire-container">
+                {% for vetement in vetements %}
+                <div class="vetement-card">
+                    <img src="{{ vetement.lien_image }}" alt="{{ vetement.name }}">
+                    <h3>{{ vetement.name }}</h3>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+    </body>
+</html>
+

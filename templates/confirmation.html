@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="1,url={{ url_for('vestiaire') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Ajout</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navBar">
+                <div class="page_name"><a href="{{ url_for('home') }}">Home</a></div>
+                <div class="page_name active"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
+                <div class="page_name"><a href="{{ url_for('generer') }}">Générer</a></div>
+            </nav>
+        </header>
+        <main>
+            <h1>Vêtement ajouté avec succés !</h1>
+        </main>
+    </body>
+</html>

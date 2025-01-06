@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Générer</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navBar">
+                <div class="page_name"><a href="{{ url_for('home') }}">Home</a></div>
+                <div class="page_name"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
+                <div class="page_name active"><a href="{{ url_for('generer') }}">Générer</a></div>
+            </nav>
+            <h1 class="header-1">Générez vos tenues</h1>
+        </header>
+
+        <main>
+            <form action="/generer" method="POST" class="btn-section">
+                <button name="action" value="generer">Générer une tenue</button>
+            </form>
+
+            {% if tenue %}
+            <div class="tenue-container-generee">
+                <div class="vetement-tenue-generee">
+                    <img src="{{ tenue['haut']['lien_image'] }}" alt="{{ tenue['haut']['name'] }}">
+                    <p>{{ tenue['haut']['name'] }}</p>
+                </div>
+                <div class="vetement-tenue-generee">
+                    <img src="{{ tenue['bas']['lien_image'] }}" alt="{{ tenue['bas']['name'] }}">
+                    <p>{{ tenue['bas']['name'] }}</p>
+                </div>
+                <div class="vetement-tenue-generee">
+                    <img src="{{ tenue['chaussures']['lien_image'] }}" alt="{{ tenue['chaussures']['name'] }}">
+                    <p>{{ tenue['chaussures']['name'] }}</p>
+                </div>
+            </div>
+            <div class="smash-btn-section">
+                <form action="/enregistrer_tenue" method="POST">
+                    <button class="smash-btn" type="submit" name="tenue" value="{{ tenue }}">Smash</button>
+                </form>
+                <form action="/generer" method="POST">
+                    <button class="pass-btn">Pass</button>
+                </form>
+            </div>
+            {% endif %}       
+        </main> 
+    </body>
+</html>

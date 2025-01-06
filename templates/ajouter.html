@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <title>Ajouter</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navBar">
+                <div class="page_name"><a href="{{ url_for('home') }}">Home</a></div>
+                <div class="page_name active"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
+                <div class="page_name"><a href="{{ url_for('generer') }}">Générer</a></div>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="header-1">Ajouter un vêtement</h1>
+            
+            <section class="form-section">
+                <form class="import-form" action="/ajouter" method="POST" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" placeholder="Nom du vêtement" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="color">Couleur :</label>
+                        <input type="text" id="color" name="color" placeholder="Couleur (ex : noir)">
+                    </div>
+                    <div class="form-row">
+                        <label for="style">Style :</label>
+                        <select name="style" id="style">
+                            <option value="" disabled selected>Choisissez un style</option>
+                            <option value="casual">Casual</option>
+                            <option value="sportif">Sportif</option>
+                            <option value="chic">Chic</option>
+                            <option value="streetwear">Streetwear</option>
+                            <option value="formel">Formel</option>
+                            <option value="elegant">Élégant</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="ghotique">Ghotique</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="categorie">Catégorie :</label>
+                        <select id="categorie" name="categorie" required>
+                            <option value="" disabled selected>Choisissez une catégorie</option>
+                            <option value="t-shirt">T-shirt</option>
+                            <option value="pull">Pull</option>
+                            <option value="sweatshirt">Sweatshirt</option>
+                            <option value="debardeur">Débardeur</option>
+                            <option value="chemise">Chemise</option>
+                            <option value="veste">Veste</option>
+                            <option value="manteau">Manteau</option>
+                            <option value="doudoune">Doudoune</option>
+                            <option value="robe">Robe</option>
+                            <option value="pantalon">Pantalon</option>
+                            <option value="jean">Jean</option>
+                            <option value="jogging">Jogging</option>
+                            <option value="short">Short</option>
+                            <option value="jupe">Jupe</option>
+                            <option value="baskets">Baskets</option>
+                            <option value="bottes">Bottes</option>
+                            <option value="sandales">Sandales</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="image">Image :</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit">Importer</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

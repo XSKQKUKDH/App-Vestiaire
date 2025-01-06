@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --clr-white: #ffffff;
+    --clr-light: #e8e5e480;
+    --clr-grey: #7f7f7f;
+    --clr-black: #000000;
+    --clr-primary: #4caf50;
+    --clr-primary-light: #81c784;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.4rem;
+    margin: 100px 23% 30px;
+    font-weight: 500;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    width: 290px;
+    height: 45px;
+    margin-top: 22px;
+    background-color: var(--clr-light);
+    padding: 4px;
+    border-radius: 20px;
+
+    position: relative; /* Permet de positionner les éléments enfants par rapport à ce conteneur */
+    z-index: 10; /* Permet de placer la barre de navigation au-dessus des autres éléments */
+
+    /* slide in animation */
+    animation: slideInLeft 1.5s ease-out;
+}
+
+.navBar .page_name {
+    width: 100px;
+    height: 100%;
+    display: flex; /* Utilise flex pour centrer le lien */
+    align-items: center; /* Centre verticalement le lien */
+    justify-content: center; /* Centre horizontalement le lien */
+    border-radius: 20px;
+}
+
+.navBar .page_name a,
+                   a:link,
+                   a:visited {
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+.navBar .page_name.active {
+    background-color: white;
+    height: 100%;
+}
+
+.navBar .page_name a:hover {
+    color: var(--clr-grey);
+}
+
+/* KeyFrames (animations) */
+@keyframes apearFall {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes apearUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.header-1 {
+    animation: apearFall 1.5s ease-out;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+
+    /* animation */
+    animation: slideInRight 1.5s ease-out;
+}
+
+.skills .skill-item {
+    display: flex;
+    background-color: var(--clr-light);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.skills .skill-item:first-child {
+    background-color: var(--clr-white);
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.import-form {
+    width: 80%;
+    max-width: 500px;
+    background-color: var(--clr-light);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-row input,
+.form-row select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--clr-grey);
+    border-radius: 5px;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: var(--clr-black);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--clr-grey);
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.smash-btn-section {
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px 100px 10px ;
+    gap: 150px;
+}
+
+.smash-btn {
+    background-color: green;
+}
+
+.smash-btn:hover {
+    background-color: var(--clr-light);
+    color: green;
+    border: solid 1px green;
+}
+
+.pass-btn {
+    background-color: red;
+}
+
+.pass-btn:hover {
+    background-color: var(--clr-light);
+    color: red;
+    border: solid 1px red;
+}   
+
+.vestiaire-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px;
+}
+
+.vetement-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vetement-card img {
+    width: auto;
+    /* max-width: 200px; */
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.vetement-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.vetement-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tenue-container-generee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.vetement-tenue-generee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vetement-tenue-generee img {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.vetement-tenue-generee p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.vetement-tenue-generee:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Le logo */
+
+.logo {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    animation: apearUp 1.5s ease-out;
+}
+
+.logo img {
+    width: 22%;
+    height: 22%;
+    margin: 10px;
+}
+
+/* Conteneur des tenues enregistrées et affichées sur home */
+
+.tenues-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espacement entre les colonnes */
+    margin: 50px 200px;
+}
+
+.tenue {
+    display: flex;
+    flex-direction: column; /* Aligne les vêtements verticalement */
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
+}
+
+.vetement img {
+    max-width: 100%; /* Adapte l'image à la largeur */
+    height: auto;
+    border-radius: 8px;
+}
+
+.vetement p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 5px;
+}
