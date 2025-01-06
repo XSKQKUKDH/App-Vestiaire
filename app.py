@@ -8,6 +8,8 @@ import ast
 
 # Un autre test pour essayer la git pull commande
 
+# Et voila un test réussi, on peut refaire la git push commande cette fois
+
 app = Flask(__name__)
 app_systeme = System()
 
