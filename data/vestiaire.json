@@ -94,5 +94,29 @@
         "categorie": "pantalon",
         "lien_image": "static\\assets\\images\\pantlon cuir.webp",
         "id": 11
+    },
+    {
+        "name": "jean gris",
+        "color": "gris",
+        "style": "streetwear",
+        "categorie": "jean",
+        "lien_image": "static\\assets\\images\\jean gris.avif",
+        "id": 12
+    },
+    {
+        "name": "air max 95",
+        "color": "noir",
+        "style": "streetwear",
+        "categorie": "baskets",
+        "lien_image": "static\\assets\\images\\air max 95 noir.jpeg",
+        "id": 13
+    },
+    {
+        "name": "pull ami",
+        "color": "noir",
+        "style": "streetwear",
+        "categorie": "pull",
+        "lien_image": "static\\assets\\images\\pull ami.jpeg",
+        "id": 14
     }
 ]

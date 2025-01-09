@@ -11,6 +11,9 @@
 
     <body>
         <header>
+            <div class="logo">
+                <img src="static/assets/logo/logo_vestiaire.png" alt="Vestiaire">
+            </div>
             <nav class="navBar">
                 <div class="page_name"><a href="{{ url_for('home') }}">Home</a></div>
                 <div class="page_name active"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
@@ -20,5 +23,28 @@
         <main>
             <h1>Vêtement ajouté avec succés !</h1>
         </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>À propos</h4>
+                    <p>App Vestiaire - Organisez et générez vos tenues facilement.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="/home">Accueil</a></li>
+                        <li><a href="/generer">Générer une tenue</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <a href="#"><p style="color: white;">Facebook</p></a>
+                    <a href="#"><p style="color: white;">Instagram</p></a>
+                    <a href="#"><p style="color: white;">Tiktok</p></a>
+                </div>
+            </div>
+            <p class="footer-credit">© 2025 App Vestiaire. Tous droits réservés.</p>
+        </footer>
     </body>
 </html>
