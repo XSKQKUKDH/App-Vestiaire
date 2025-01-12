@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Arlind",
+        "username": "arlind_bclt",
+        "password": "190510",
+        "gender": "male",
+        "chemin_vestiaire": "data\\arlind_bclt\\vestiaire.json",
+        "chemin_tenues": "data\\arlind_bclt\\tenues.json",
+        "id": 0
+    },
+    {
+        "name": "Adrian",
+        "username": "adrian24",
+        "password": "240215",
+        "gender": "male",
+        "chemin_vestiaire": "data\\adrian24\\vestiaire.json",
+        "chemin_tenues": "data\\adrian24\\tenues.json",
+        "id": 1
+    }
+]

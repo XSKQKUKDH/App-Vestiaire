@@ -1,31 +1,71 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, flash
 from system import System
-import requests
 import json
 import ast
 
-# Juste un petit test pour voir si ça marche
-
-# Un autre test pour essayer la git pull commande
-
-# Et voila un test réussi, on peut refaire la git push commande cette fois
-
 app = Flask(__name__)
 app_systeme = System()
+
+app.secret_key = 'super_secret_key'
 
 @app.route('/')
 def acceuil():
     return render_template('acceuil.html')
 
+@app.route('/connection', methods=['GET', 'POST'])
+def connection():
+    if request.method == 'POST':
+        # Récupération des données du formulaire
+        username = request.form.get('username').lower()
+        password = request.form.get('password')
+
+        # Vérification des données
+        if username in app_systeme.usernames:
+            for utilisateur in app_systeme.utilisateurs:
+                if utilisateur['username'] == username:
+                    if utilisateur['password'] == password:
+                        app_systeme.connecter_utilisateur(username)
+                        return redirect(url_for('home'))
+                    else:
+                        flash('Mot de passe incorrect', 'error')
+                        return redirect(url_for('connection'))
+        else:
+            flash("Ce nom d'utilisateur n'existe pas", 'error')
+            return redirect(url_for('connection'))
+    return render_template('connection.html')
+
+@app.route('/inscription', methods=['GET', 'POST'])
+def inscription():
+    if request.method == 'POST':
+        # Récupération des données du formulaire
+        name = request.form.get('name')
+        username = request.form.get('username').lower()
+        password = request.form.get('password')
+        password2 = request.form.get('password2')
+        gender = request.form.get('gender')
+
+        # Vérification des données
+        if password != password2:
+            flash('Les mots de passe ne correspondent pas', 'error')
+            return redirect(url_for('inscription'))
+        elif username in app_systeme.usernames:
+            flash("Ce nom d'utilisateur est déjà pris", 'error')
+            return redirect(url_for('inscription'))
+        else:
+            app_systeme.inscrire_utilisateur(name, username, password, gender)
+            return redirect(url_for('home'))
+    
+    return render_template('inscription.html')
+
 @app.route('/home')
 def home():
-    with open('data/tenues.json', 'r') as file:
+    with open(app_systeme.utilisateur_connecte['chemin_tenues'], 'r') as file:
         tenues = json.load(file)
-    return render_template('home.html', tenues=tenues)
+    return render_template('home.html', tenues=tenues, name=app_systeme.utilisateur_connecte['name'])   
 
 @app.route('/vestiaire')
 def vestiaire():
-    with open('data/vestiaire.json', 'r') as file:
+    with open(app_systeme.utilisateur_connecte['chemin_vestiaire'], 'r') as file:
         vetements = json.load(file)
     return render_template('vestiaire.html', vetements=vetements)
 
@@ -55,7 +95,11 @@ def confirmation():
 def generer():
     if request.method == 'POST':
         tenue = app_systeme.generer_tenue()
-        return render_template('generer.html', tenue=tenue)
+        if tenue != None:
+            return render_template('generer.html', tenue=tenue)
+        elif tenue == None:
+            flash("Il n'y a pas assez de vêtements pour générer une tenue", 'error')
+            return render_template('generer.html')
     return render_template('generer.html')
 
 @app.route('/enregistrer_tenue', methods=['POST'])

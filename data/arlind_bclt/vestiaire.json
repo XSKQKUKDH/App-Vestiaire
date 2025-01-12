@@ -118,5 +118,21 @@
         "categorie": "pull",
         "lien_image": "static\\assets\\images\\pull ami.jpeg",
         "id": 14
+    },
+    {
+        "name": "test",
+        "color": "test",
+        "style": "vintage",
+        "categorie": "jupe",
+        "lien_image": "static\\assets\\images\\crewneck-streetwear-all-over-blue.jpg",
+        "id": 15
+    },
+    {
+        "name": "pull hologramme",
+        "color": "bleu",
+        "style": "streetwear",
+        "categorie": "pull",
+        "lien_image": "static\\assets\\images\\crewneck-streetwear-all-over-blue.jpg",
+        "id": 16
     }
 ]

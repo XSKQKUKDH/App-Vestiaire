@@ -42,7 +42,7 @@ h1 {
 .navBar {
     display: flex;
     justify-content: space-around;
-    width: 290px;
+    width: auto;
     height: 45px;
     margin-top: 22px;
     background-color: var(--clr-light);
@@ -81,6 +81,39 @@ h1 {
     color: var(--clr-grey);
 }
 
+/* style message flash */
+
+.flash-messages {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+
 /* KeyFrames (animations) */
 @keyframes apearFall {
     from {
@@ -93,7 +126,6 @@ h1 {
         transform: translateY(0px);
     }
 }
-
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -105,7 +137,6 @@ h1 {
         transform: translateX(0px);
     }
 }
-
 @keyframes apearUp {
     from {
         opacity: 0;
@@ -117,7 +148,6 @@ h1 {
         transform: translateY(0px);
     }
 }
-
 @keyframes slideInRight {
     from {
         opacity: 0;
@@ -382,7 +412,7 @@ button:hover {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin: 200px 0 0 0;
+    margin: 220px 0 0 0;
 }
 
 .footer-container {

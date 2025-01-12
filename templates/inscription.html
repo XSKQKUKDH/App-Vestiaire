@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        
+        <title>Home</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="static/assets/logo/logo_vestiaire.png" alt="Vestiaire">
+            </div>
+            <nav class="navBar">
+                <div class="page_name"><a href="{{ url_for('connection') }}">Se connecter</a></div>
+                <div class="page_name active"><a href="{{ url_for('inscription') }}">S'inscrire</a></div>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="header-1">Inscription</h1>
+
+            <!-- Messages flash -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <section class="form-section">
+                <form action="/inscription" class="import-form" method="POST">
+
+                    <div class="form-row">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" placeholder="Nom" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="username">Nom d'utilisateur :</label>
+                        <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password2">Confirmer le mot de passe :</label>
+                        <input type="password" id="password2" name="password2" placeholder="Confirmer le mot de passe" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="gender">Genre :</label>
+                        <select name="gender" id="gender">
+                            <option value="" disabled selected>Choisissez un genre</option>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">S'inscrire</button>
+                    </div>
+                </form>
+
+            </section>
+        </main>
+    </body>

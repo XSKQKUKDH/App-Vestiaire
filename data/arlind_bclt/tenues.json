@@ -310,5 +310,57 @@
             "lien_image": "static\\assets\\images\\air max 95 noir.jpeg",
             "id": 13
         }
+    },
+    {
+        "haut": {
+            "name": "t shirt vert",
+            "color": "vert",
+            "style": "chic",
+            "categorie": "t-shirt",
+            "lien_image": "static\\assets\\images\\t shirt vert.webp",
+            "id": 5
+        },
+        "bas": {
+            "name": "Jean Noir",
+            "color": "noir",
+            "style": "casual",
+            "categorie": "jean",
+            "lien_image": "static\\assets\\images\\jean_noir.jpeg",
+            "id": 9
+        },
+        "chaussures": {
+            "name": "air max 95",
+            "color": "noir",
+            "style": "streetwear",
+            "categorie": "baskets",
+            "lien_image": "static\\assets\\images\\air max 95 noir.jpeg",
+            "id": 13
+        }
+    },
+    {
+        "haut": {
+            "name": "pull hologramme",
+            "color": "bleu",
+            "style": "streetwear",
+            "categorie": "pull",
+            "lien_image": "static\\assets\\images\\crewneck-streetwear-all-over-blue.jpg",
+            "id": 16
+        },
+        "bas": {
+            "name": "jean gris",
+            "color": "gris",
+            "style": "streetwear",
+            "categorie": "jean",
+            "lien_image": "static\\assets\\images\\jean gris.avif",
+            "id": 12
+        },
+        "chaussures": {
+            "name": "Jordan 4 Retro",
+            "color": "bleu",
+            "style": "streetwear",
+            "categorie": "baskets",
+            "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
+            "id": 10
+        }
     }
 ]
