@@ -16,5 +16,14 @@
         "chemin_vestiaire": "data\\adrian24\\vestiaire.json",
         "chemin_tenues": "data\\adrian24\\tenues.json",
         "id": 1
+    },
+    {
+        "name": "Alex",
+        "username": "alex_bcl",
+        "password": "1978",
+        "gender": "male",
+        "chemin_vestiaire": "data\\alex_bcl\\vestiaire.json",
+        "chemin_tenues": "data\\alex_bcl\\tenues.json",
+        "id": 2
     }
 ]

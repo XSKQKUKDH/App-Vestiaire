@@ -362,5 +362,31 @@
             "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
             "id": 10
         }
+    },
+    {
+        "haut": {
+            "name": "pull ami",
+            "color": "noir",
+            "style": "streetwear",
+            "categorie": "pull",
+            "lien_image": "static\\assets\\images\\pull ami.jpeg",
+            "id": 14
+        },
+        "bas": {
+            "name": "Jean Noir",
+            "color": "noir",
+            "style": "casual",
+            "categorie": "jean",
+            "lien_image": "static\\assets\\images\\jean_noir.jpeg",
+            "id": 9
+        },
+        "chaussures": {
+            "name": "Jordan 4 Retro",
+            "color": "bleu",
+            "style": "streetwear",
+            "categorie": "baskets",
+            "lien_image": "static\\assets\\images\\jordan 4 bleue.webp",
+            "id": 10
+        }
     }
 ]

@@ -134,5 +134,13 @@
         "categorie": "pull",
         "lien_image": "static\\assets\\images\\crewneck-streetwear-all-over-blue.jpg",
         "id": 16
+    },
+    {
+        "name": "jean bleu",
+        "color": "bleu",
+        "style": "casual",
+        "categorie": "jean",
+        "lien_image": "static\\assets\\images\\jean.jpeg",
+        "id": 17
     }
 ]
