@@ -2,6 +2,8 @@ from flask import Flask, render_template, url_for, request, redirect, flash
 from system import System
 import json
 import ast
+import webbrowser
+from threading import Timer
 
 app = Flask(__name__)
 app_systeme = System()
@@ -116,4 +118,5 @@ def ajouter_tenue():
         return render_template('generer.html')
 
 if __name__ == '__main__':
+    webbrowser.open_new('http://127.0.0.1:5000/')
     app.run(debug=True)
