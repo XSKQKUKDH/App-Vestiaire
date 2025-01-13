@@ -2,12 +2,14 @@
 
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        
-        <title>Home</title>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            
+            <title>Profile</title>
+        </head>
     </head>
 
     <body>
@@ -15,48 +17,45 @@
             <div class="logo">
                 <img src="static/assets/logo/logo_vestiaire.png" alt="Vestiaire">
             </div>
-            <div class="profile-icon">
-                <a href="{{ url_for('profile') }}"><img src="static/assets/icons/icon_profile.jpeg" alt="Profile"></a>
-            </div>
             <nav class="navBar">
                 <div class="page_name active"><a href="{{ url_for('home') }}">Home</a></div>
                 <div class="page_name"><a href="{{ url_for('vestiaire') }}">Vestiaire</a></div>
                 <div class="page_name"><a href="{{ url_for('generer') }}">Générer</a></div>
             </nav>
-
-            <div class="presentation">
-                <h1 class="header-1">Bienvenue {{ name }}, ici plus besoin de réfléchir à vos tenues</h1>
-                <div class="skills">
-                    <div class="skill-item">Expertise</div>
-                    <div class="skill-item">Vestiaire</div>
-                    <div class="skill-item">Automation</div>
-                    <div class="skill-item">Design System</div>
-                </div>
-            </div>
-            
+            <h1 class="header-1">Profile</h1>
         </header>
-        
+
         <main>
-            <div class="tenues-container">
-                {% for tenue in tenues %}
-                <div class="tenue">
-                    <div class="vetement">
-                        <img src="{{ tenue['haut']['lien_image'] }}" alt="{{ tenue['haut']['name'] }}">
-                        <!-- <p>{{ tenue['haut']['name'] }}</p> -->
+            <div class="profile-container">
+                <div class="profile-img">
+                    <img src="static/assets/icons/icon_profile.jpeg" alt="profile">
+                </div>
+                <div class="profile">
+                    <div class="profile-item">
+                        <pre class="profile-item-title">Nom : </pre>
+                        <p class="profile-item-value">{{ utilisateur['name'] }}</p>
                     </div>
-                    <div class="vetement">
-                        <img src="{{ tenue['bas']['lien_image'] }}" alt="{{ tenue['bas']['name'] }}">
-                        <!-- <p>{{ tenue['bas']['name'] }}</p> -->
+                    <div class="profile-item">
+                        <pre class="profile-item-title">Username : </pre>
+                        <p class="profile-item-value">{{ utilisateur['username'] }}</p>
                     </div>
-                    <div class="vetement">
-                        <img src="{{ tenue['chaussures']['lien_image'] }}" alt="{{ tenue['chaussures']['name'] }}">
-                        <!-- <p>{{ tenue['chaussures']['name'] }}</p> -->
+                    <div class="profile-item">
+                        <pre class="profile-item-title">Mot de passe : </pre>
+                        <p class="profile-item-value">{{ utilisateur['password'] }}</p>
+                    </div>
+                    <div class="profile-item">
+                        <pre class="profile-item-title">Sexe : </pre>
+                        <p class="profile-item-value">{{ utilisateur['gender'] }}</p>
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            
+            <div class="smash-btn-section">
+                <form action="/connection">
+                    <button class="pass-btn">Se déconnecter</button>
+                </form>
+            </div>
         </main>
+
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-section">
@@ -80,6 +79,5 @@
             </div>
             <p class="footer-credit">© 2025 App Vestiaire. Tous droits réservés.</p>
         </footer>
-        
     </body>
 </html>

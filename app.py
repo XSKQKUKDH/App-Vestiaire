@@ -117,6 +117,9 @@ def ajouter_tenue():
     else:
         return render_template('generer.html')
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', utilisateur=app_systeme.utilisateur_connecte)
+
 if __name__ == '__main__':
-    webbrowser.open_new('http://127.0.0.1:5000/')
     app.run(debug=True)
