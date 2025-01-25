@@ -25,5 +25,41 @@
         "chemin_vestiaire": "data\\alex_bcl\\vestiaire.json",
         "chemin_tenues": "data\\alex_bcl\\tenues.json",
         "id": 2
+    },
+    {
+        "name": "apo",
+        "username": "apo_llv",
+        "password": "Apolele2010*",
+        "gender": null,
+        "chemin_vestiaire": "data\\apo_llv\\vestiaire.json",
+        "chemin_tenues": "data\\apo_llv\\tenues.json",
+        "id": 3
+    },
+    {
+        "name": "Jean",
+        "username": "legorille du 92",
+        "password": "gty",
+        "gender": "homme",
+        "chemin_vestiaire": "data\\legorille du 92\\vestiaire.json",
+        "chemin_tenues": "data\\legorille du 92\\tenues.json",
+        "id": 4
+    },
+    {
+        "name": "Klejda",
+        "username": "klejda",
+        "password": "1979",
+        "gender": "femme",
+        "chemin_vestiaire": "data\\klejda\\vestiaire.json",
+        "chemin_tenues": "data\\klejda\\tenues.json",
+        "id": 5
+    },
+    {
+        "name": "Lola",
+        "username": "lolalabest",
+        "password": "1234",
+        "gender": "femme",
+        "chemin_vestiaire": "data\\lolalabest\\vestiaire.json",
+        "chemin_tenues": "data\\lolalabest\\tenues.json",
+        "id": 6
     }
 ]

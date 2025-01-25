@@ -414,5 +414,31 @@
             "lien_image": "static\\assets\\images\\air jordan bleu.jpeg",
             "id": 8
         }
+    },
+    {
+        "haut": {
+            "name": "pull nike nocta",
+            "color": "noir",
+            "style": "sportif",
+            "categorie": "pull",
+            "lien_image": "static\\assets\\images\\t\u00e9l\u00e9charg\u00e9.jpeg",
+            "id": 17
+        },
+        "bas": {
+            "name": "Jean Noir",
+            "color": "noir",
+            "style": "casual",
+            "categorie": "jean",
+            "lien_image": "static\\assets\\images\\jean_noir.jpeg",
+            "id": 9
+        },
+        "chaussures": {
+            "name": "air max 95",
+            "color": "noir",
+            "style": "streetwear",
+            "categorie": "baskets",
+            "lien_image": "static\\assets\\images\\air max 95 noir.jpeg",
+            "id": 13
+        }
     }
 ]

@@ -5,6 +5,7 @@ import os
 class System:
     def __init__(self):
 
+        # Catégories de vêtements
         self.categorie_hauts = [
             "t-shirt",
             "pull",
